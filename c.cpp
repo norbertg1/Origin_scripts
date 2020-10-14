@@ -33,9 +33,9 @@
 // Start your functions here.
 
 //from matrix extract COLUMNS "from" and "to" and put them in worsheet. Last column in worksheet is the avarage value of each rows.
-void extract_columns_from_matrix(int from, int to){
+void extract_columns_from_matrix(int from, int to, int which_matrix){
 	MatrixLayer mlayer = Project.ActiveLayer();  // Active matrix sheet
-	MatrixObject mobject = mlayer.MatrixObjects(1);  // The 1st matrix object, YOU CHANGE THIS NUMBER ACCORDING TO MATRIX YOU WANT TO EXTRAKT FROM
+	MatrixObject mobject = mlayer.MatrixObjects(which_matrix);  // The 1st matrix object, YOU CHANGE THIS NUMBER ACCORDING TO MATRIX YOU WANT TO EXTRAKT FROM
 	matrixbase &mbase = mobject.GetDataObject();  // Get data from matrix object
 	vector v1;
 	
